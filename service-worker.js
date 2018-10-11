@@ -5,6 +5,7 @@ var filesToCache = [
     './index.html',
     './scripts/app.js',
     './styles/style.css',
+    "./1/images/sc_2.jpg",
     "./1/images/10_big.jpg",
     "./1/images/10_ogl.jpg",
     "./1/images/11_big.jpg",
