@@ -1,4 +1,4 @@
-// v.3.1 170305
+// v.3.1 171119
 {	// Global objects
 	var CLD =
 	{
@@ -160,7 +160,6 @@
 		sEntry: "",
 		sLocation: ""
 	}; 
-	var CLPath = [];
 }
 
 window.List = function (oArgs)
@@ -1349,11 +1348,11 @@ window.Action = function (oArgs)
 				}
 				else if(this.oParams.sProtocol=="mailto")
 				{
-					document.location.href = "mailto:" + this.oParams.exprURL + "?subject=" + escape(this.oParams.sSubject) + "&body=" + escape(CL.Resp.EvalExpr({ sExpr: this.oParams.sBody, bString: true }));
+					document.location.href = "mailto:" + this.oParams.exprURL + "?subject=" + encodeURIComponent(this.oParams.sSubject) + "&body=" + encodeURIComponent(CL.Resp.EvalExpr({ sExpr: this.oParams.sBody, bString: true }));
 				}
 				else
 				{
-					var sURL = CL.Resp.EvalExpr({ sExpr: this.oParams.exprURL, bString: true });
+					var sURL = CL.Resp.EvalExpr({ sExpr: this.oParams.exprURL, bEval: false, bString: true });
 					var sURLLC = sURL.toLowerCase();
 					if(!(sURLLC.indexOf("http://")==0 || sURLLC.indexOf("https://")==0))
 					{
@@ -6122,6 +6121,628 @@ window.CLFlash = function (oArgs)
 	return this;
 };
 
+{ // CLModulePath
+	window.CLModulePath = function (oArgs)
+	{
+		this.oPlayer = oArgs.oPlayer;
+		this.sPathObjectId = oArgs.sPathObjectId;
+		this.oChapters = {};
+		this.aChapterOrder = [];
+		this.aSlideOrder = [];
+		this.oSlides = {};
+		this.bAlternative = false;
+		this.Constructor();
+		return this;	
+	}
+	CLModulePath.prototype.Constructor = function (oArgs)
+	{
+		var sId;
+		var sGUID;
+		if(this.sPathObjectId==null)
+		{
+			sGUID = CLTOOLS.GUID();
+			this.aChapterOrder = [ sGUID ];
+			this.oChapters[sGUID] =
+			{
+				aConditions: [],
+				aSlideOrder: [],
+				oSlides: {},
+				sObjectiveId: "", 
+				sTitle: "",
+				sTitleSlideId: null,
+				sNumber: "1",
+				sMsg: ""
+			};
+			for(var i=0; i<this.oPlayer.axSlides.length; i++)
+			{
+				sId = this.oPlayer.axSlides[i].getAttribute("id");
+				this.oChapters[sGUID].aSlideOrder.push(sId);
+				this.oChapters[sGUID].oSlides[sId] = { iNum: i, xNode: this.oPlayer.axSlides[i] };
+				this.oSlides[sId] = { iNum: i, sChapterId: sGUID };
+				this.aSlideOrder.push(sId);
+			}
+		}
+		else
+		{
+			this.bAlternative = true;
+			this.jxParams = this.oPlayer.jxParams.children("param[objectid='" + this.sPathObjectId + "']");
+			var jxChapters = this.jxParams.find("chapter_list > item");
+			var jxChapter;
+			var jxSlides;
+			var jxSlide;
+			var sSlideId;
+			var jxConditions;
+			var jxCondition;
+			var jxSlidesToVisit;
+			for(var i=0; i<jxChapters.length; i++)
+			{
+				jxChapter = $(jxChapters[i]);
+				sGUID = CLTOOLS.GUID();
+				this.aChapterOrder.push(sGUID);
+				this.oChapters[sGUID] =
+				{
+					aConditions: [],
+					aSlideOrder: [],
+					sObjectiveId: jxChapter.children("chapter_objective").text(),
+					sTitle: jxChapter.children("chapter_name").text(),
+					sTitleSlideId: jxChapter.children("chapter_title_slide").text(),
+					sNumber: jxChapter.children("chapter_number").text(),
+					sMsg: jxChapter.children("chapter_incomplete").text()
+				};
+				if(this.oChapters[sGUID].sTitleSlideId!=null & this.oChapters[sGUID].sTitleSlideId!="")
+				{
+					this.oChapters[sGUID].aSlideOrder.push(this.oChapters[sGUID].sTitleSlideId);
+					this.aSlideOrder.push(this.oChapters[sGUID].sTitleSlideId);
+				}
+				jxSlides = jxChapter.find("slide_list > item > slide_id");
+				for(var j=0; j<jxSlides.length; j++)
+				{
+					sSlideId = $(jxSlides[j]).text();
+					this.oChapters[sGUID].aSlideOrder.push(sSlideId);
+					this.aSlideOrder.push(sSlideId);
+					this.oSlides[sSlideId] = { iNum: j, sChapterId: sGUID };
+				}
+				jxConditions = jxChapter.find("chapter_conditions > item");
+				for(var j=0; j<jxConditions.length; j++)
+				{
+					jxCondition = $(jxConditions[j]);
+					this.oChapters[sGUID].aConditions[j] =
+					{
+						sOp: jxCondition.children("operator").text(),
+						sType: ((jxCondition.children("type_slides").text()=="yes") ? "slides" : ((jxCondition.children("type_score").text()=="yes") ? "score" : ((jxCondition.children("type_completion").text()=="yes") ? "cs" : ((jxCondition.children("type_success").text()=="yes") ? "ss" : "slides" ))))	
+					};
+					switch(this.oChapters[sGUID].aConditions[j].sType)
+					{
+						case "slides":
+						{
+							if(jxCondition.children("allsides").text()=="yes")
+							{
+								this.oChapters[sGUID].aConditions[j].aSlidesToVisit = this.oChapters[sGUID].aSlideOrder;
+							}
+							else
+							{
+								jxSlidesToVisit = jxCondition.find("slides_to_visit > item > slide_id");
+								this.oChapters[sGUID].aConditions[j].aSlidesToVisit = [];
+								for(k=0; k<jxSlidesToVisit.length; k++)
+								{
+									this.oChapters[sGUID].aConditions[j].aSlidesToVisit.push($(jxSlidesToVisit[k]).text());
+								}
+							}
+							break;
+						}
+						case "score":
+						{
+							this.oChapters[sGUID].aConditions[j].sObjectiveId = jxCondition.children("objective").text();
+							this.oChapters[sGUID].aConditions[j].sCond = jxCondition.children("score_condition").text();
+							this.oChapters[sGUID].aConditions[j].sValue = jxCondition.children("score_value").text();
+							break;
+						}
+						case "cs":
+						case "ss":
+						{
+							this.oChapters[sGUID].aConditions[j].sObjectiveId = jxCondition.children("objective").text();
+							this.oChapters[sGUID].aConditions[j].sStatus = jxCondition.children( this.oChapters[sGUID].aConditions[j].sType ).text();
+							break;
+						}
+					}
+				}
+			}
+		}
+		return this;
+	}
+	CLModulePath.prototype._EvalCondition = function (oArgs)
+	{
+		var bMet = true;
+		switch(oArgs.oCondition.sType)
+		{
+			case "slides":
+			{
+				for(var i=0; i<oArgs.oCondition.aSlidesToVisit.length; i++)
+				{
+					if($.inArray(oArgs.oCondition.aSlidesToVisit[i], CLZ.aVisited)==-1)
+					{
+						bMet = false;
+						break;
+					}
+				}
+				break;
+			}
+			case "score":
+			{
+				var nScore = this.oPlayer.SCO.GetObjectiveScore({ sId: oArgs.oCondition.sObjectiveId });
+				var nValue = parseFloat(oArgs.oCondition.sValue);
+				if(isNaN(nValue) && oArgs.sCond!="ne")
+				{
+					bMet = false;
+					break;
+				}
+				switch(oArgs.sCond)
+				{
+					case "eq":
+					{
+						bMet = (nScore==nValue);
+						break;
+					}
+					case "gt":
+					{
+						bMet = (nScore>nValue);
+						break;
+					}
+					case "gte":
+					{
+						bMet = (nScore>=nValue);
+						break;
+					}
+					case "lt":
+					{
+						bMet = (nScore<nValue);
+						break;
+					}
+					case "lte":
+					{
+						bMet = (nScore!=nValue);
+						break;
+					}
+					case "eq":
+					{
+						bMet = (nScore!=nValue);
+						break;
+					}
+				}
+				break;
+			}
+			case "cs":
+			{
+				bMet = (this.oPlayer.SCO.GetObjectiveCompletionStatus({ sId: oArgs.sObjectiveId })==oArgs.sCS);
+				break;
+			}
+			case "ss":
+			{
+				bMet = (this.oPlayer.SCO.GetObjectiveSuccessStatus({ sId: oArgs.sObjectiveId })==oArgs.sSS);
+				break;
+			}
+		}
+		return bMet;
+	}
+	CLModulePath.prototype._GetChapterId = function (oArgs)
+	{ //sChapter
+		var sChapterId = "";
+		var iIdx;
+		if(oArgs!=null)
+		{
+			if(oArgs.sChapter!=null)
+			{
+				switch(oArgs.sChapter)
+				{
+					case "first":
+					{
+						sChapterId = this.aChapterOrder[0];
+						break;
+					}
+					case "last":
+					{
+						sChapterId = this.aChapterOrder[this.aChapterOrder.length-1];
+						break;
+					}
+					case "prev":
+					{
+						sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+						iIdx = $.inArray(sChapterId, this.aChapterOrder);
+						if(iIdx<=0)
+						{
+							sChapterId = "";
+						}
+						else
+						{
+							sChapterId = this.aChapterOrder[iIdx-1];
+						}
+						break;
+					}
+					case "next":
+					{
+						sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+						iIdx = $.inArray(sChapterId, this.aChapterOrder);
+						if(iIdx>=this.aChapterOrder.length-1)
+						{
+							sChapterId = "";
+						}
+						else
+						{
+							sChapterId = this.aChapterOrder[iIdx+1];
+						}
+						break;
+					}
+					case "current":
+					default:
+					{
+						sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+						break;
+					}
+				}
+			}
+			else
+			{
+				sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+			}
+		}
+		else
+		{
+			sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+		}
+		return sChapterId;
+	}
+	CLModulePath.prototype._GetChapterTitle = function (oArgs)
+	{ //sChapter
+		var sChapterTitle = "";
+		var sChapterId;
+		var iIdx;
+		if(oArgs!=null)
+		{
+			if(oArgs.sChapter!=null)
+			{
+				switch(oArgs.sChapter)
+				{
+					case "first":
+					{
+						sChapterTitle = this.oChapters[this.aChapterOrder[0]].sTitle;
+						break;
+					}
+					case "last":
+					{
+						sChapterTitle = this.oChapters[this.aChapterOrder[this.aChapterOrder.length-1]].sTitle;
+						break;
+					}
+					case "prev":
+					{
+						sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+						iIdx = $.inArray(sChapterId, this.aChapterOrder);
+						if(iIdx>0)
+						{
+							sChapterTitle = this.oChapters[this.aChapterOrder[iIdx-1]].sTitle;
+						}
+						break;
+					}
+					case "next":
+					{
+						sChapterId = this.oSlides[CLZ.sCurrentSlideId].sChapterId;
+						iIdx = $.inArray(sChapterId, this.aChapterOrder);
+						if(iIdx<this.aChapterOrder.length-1)
+						{
+							sChapterTitle = this.oChapters[this.aChapterOrder[iIdx+1]].sTitle;
+						}
+						break;
+					}
+					case "current":
+					default:
+					{
+						sChapterTitle = this.oChapters[this.oSlides[CLZ.sCurrentSlideId].sChapterId].sTitle;
+						break;
+					}
+				}
+			}
+			else
+			{
+				sChapterTitle = this.oChapters[this.oSlides[CLZ.sCurrentSlideId].sChapterId].sTitle;
+			}
+		}
+		else
+		{
+			sChapterTitle = this.oChapters[this.oSlides[CLZ.sCurrentSlideId].sChapterId].sTitle;
+		}
+		return sChapterTitle;
+	}
+	CLModulePath.prototype._GetLength = function (oArgs)
+	{ // bChapter, sChapterId
+		var iLength = this.aSlideOrder.length;
+		if(oArgs!=null)
+		{
+			if(oArgs.bChapter==true)
+			{
+				if(oArgs.sChapterId==null)
+				{
+					iLength = this.oChapters[ this.oSlides[CLZ.sCurrentSlideId].sChapterId ].aSlideOrder.length;
+				}
+				else if(this.oChapters[ oArgs.sChapterId ]!=null)
+				{
+					iLength = this.oChapters[ oArgs.sChapterId ].aSlideOrder.length;
+				}
+			}
+		}
+		return iLength;
+	}
+	CLModulePath.prototype._GetSlideList = function (oArgs)
+	{ // bChapter
+		var aSlides = this.aSlideOrder;
+		if(oArgs!=null)
+		{
+			if(oArgs.bChapter==true)
+			{
+				if(oArgs.sChapterId==null)
+				{
+					aSlides = this.oChapters[ this.oSlides[CLZ.sCurrentSlideId].sChapterId ].aSlideOrder;
+				}
+				else
+				{
+					aSlides = this.oChapters[ oArgs.sChapterId ].aSlideOrder;
+				}
+			}
+		}
+		return aSlides;
+	}
+	CLModulePath.prototype._GetSlideNumber = function (oArgs)
+	{ // bChapter, sChapterId, sSlideId
+		var iNumber = -1;
+		if(oArgs!=null)
+		{
+			if(oArgs.bChapter==true)
+			{
+				if(oArgs.sChapterId==null)
+				{
+					if(oArgs.sSlideId==null)
+					{
+						iNumber = $.inArray(CLZ.sCurrentSlideId, this.oChapters[ this.oSlides[CLZ.sCurrentSlideId].sChapterId ].aSlideOrder) + 1;
+					}
+					else
+					{
+						iNumber = $.inArray(oArgs.sSlideId, this.oChapters[ this.oSlides[CLZ.sCurrentSlideId].sChapterId ].aSlideOrder) + 1;
+					}
+				}
+				else if(this.oChapters[ oArgs.sChapterId ]!=null)
+				{
+					if(oArgs.sSlideId==null)
+					{
+						iNumber = $.inArray(CLZ.sCurrentSlideId, this.oChapters[ oArgs.sChapterId ].aSlideOrder) + 1;
+					}
+					else
+					{
+						iNumber = $.inArray(oArgs.sSlideId, this.oChapters[ oArgs.sChapterId ].aSlideOrder) + 1;
+					}
+				}
+			}
+			else
+			{
+				if(oArgs.sSlideId==null)
+				{
+					iNumber = $.inArray(CLZ.sCurrentSlideId, this.aSlideOrder) + 1;
+				}
+				else
+				{
+					iNumber = $.inArray(oArgs.sSlideId, this.aSlideOrder) + 1;
+				}
+			}
+		}
+		else
+		{
+			iNumber = $.inArray(CLZ.sCurrentSlideId, this.aSlideOrder) + 1;
+		}
+		return iNumber;
+	}
+	CLModulePath.prototype._GetTargetFrameId = function (oArgs)
+	{ // sTarget
+		var sFrameId = "";
+		var jxFrame = CL.axSlides.find("frame[id='" + CLZ.sCurrentFrameId + "']");
+		var jxTarget;
+		var sDir = (oArgs.sDir!=null) ? oArgs.sDir : (oArgs.sTarget!=null ? oArgs.sTarget : "");
+		switch(sDir)
+		{
+			case "this":
+			{
+				sFrameId = CLZ.sCurrentFrameId;
+				break;
+			}
+			case "next":
+			{
+				jxTarget = jxFrame.next();
+				if(jxTarget.length==0)
+				{
+					var sSlideId = this._GetTargetSlideId({ sTarget: "next" });
+					if(sSlideId!="" && this._TargetAllowed({ sSlideId: sSlideId }))
+					{
+						sFrameId = CL.jxModule.find("slide[id='" + sSlideId + "'] frame:first").attr("id");
+					}
+				}
+				else
+				{
+					sFrameId = jxTarget.attr("id");
+				}
+				break;
+			}
+			case "prev":
+			{
+				jxTarget = jxFrame.prev();
+				if(jxTarget.length==0)
+				{
+					var sSlideId = this._GetTargetSlideId({ sTarget: "prev" });
+					if(sSlideId!="" && this._TargetAllowed({ sSlideId: sSlideId }))
+					{
+						sFrameId = CL.jxModule.find("slide[id='" + sSlideId + "'] frame:last").attr("id");
+					}
+				}
+				else
+				{
+					sFrameId = jxTarget.attr("id");
+				}
+				break;
+			}
+			case "first":
+			{
+				jxTarget = jxFrame.parent().children(":first");
+				sFrameId = jxTarget.attr("id");
+				break;
+			}
+			case "last":
+			{
+				jxTarget = jxFrame.parent().children(":last");
+				sFrameId = jxTarget.attr("id");
+				break;
+			}
+		}
+		return sFrameId;
+	}
+	CLModulePath.prototype._GetTargetSlideId = function (oArgs)
+	{ // sTarget, sChapter
+		var sSlideId = "";
+		if(oArgs!=null)
+		{
+			if(oArgs.sTarget=="this")
+			{
+				return CLZ.sCurrentSlideId;
+			}
+			var sChapterId = this._GetChapterId({ sChapter: oArgs.sChapter });
+			var iSlideIdx;
+			var iCurrentIdx;
+			switch(oArgs.sTarget)
+			{
+				case "this":
+				{
+					break;
+				}
+				case "first":
+				{
+					iSlideIdx = 0;
+					break;
+				}
+				case "last":
+				{
+					iSlideIdx = this.oChapters[sChapterId].aSlideOrder.length-1;
+					break;
+				}
+				case "prev":
+				{
+					iCurrentIdx = $.inArray(CLZ.sCurrentSlideId, this.oChapters[sChapterId].aSlideOrder);
+					if(iCurrentIdx<=0)
+					{
+						sChapterId = this._GetChapterId({ sChapter: "prev" });
+						if(sChapterId!="")
+						{
+							iSlideIdx = this.oChapters[sChapterId].aSlideOrder.length-1;
+						}
+					}
+					else
+					{
+						iSlideIdx = iCurrentIdx - 1;
+					}
+					break;
+				}
+				case "next":
+				{
+					iCurrentIdx = $.inArray(CLZ.sCurrentSlideId, this.oChapters[sChapterId].aSlideOrder);
+					if(iCurrentIdx>=this.oChapters[sChapterId].aSlideOrder.length-1)
+					{
+						sChapterId = this._GetChapterId({ sChapter: "next" });
+						if(sChapterId!="")
+						{
+							iSlideIdx = 0;
+						}
+					}
+					else
+					{
+						iSlideIdx = iCurrentIdx + 1;
+					}
+					break;
+				}
+			}
+			if(this.oChapters[sChapterId]!=null)
+			{
+				sSlideId = this.oChapters[sChapterId].aSlideOrder[iSlideIdx];
+			}
+			if(sSlideId==null)
+			{
+				sSlideId = "";
+			}
+			else if(sSlideId!="")
+			{
+				if(!this._TargetAllowed({ sSlideId: sSlideId }))
+				{
+					sSlideId = "";
+				}
+			}
+		}
+		return sSlideId;
+	}
+	CLModulePath.prototype._TargetAllowed = function (oArgs)
+	{ // sSlideId
+		if(oArgs.sSlideId=="")
+		{
+			return false;
+		}
+		if(oArgs.sSlideId==CLZ.sCurrentSlideId)
+		{
+			return true;
+		}
+		var bAllowed = true;
+		var sCurrentChapter = this._GetChapterId({ sChapter: "current" });
+		var sTargetChapter = this.oSlides[oArgs.sSlideId].sChapterId;
+		if(sCurrentChapter!=sTargetChapter)
+		{
+			if(this.oChapters[sCurrentChapter].aConditions.length>0)
+			{
+				var aAND = [];
+				var aOR = [];
+				for(var i=0; i<this.oChapters[sCurrentChapter].aConditions.length; i++)
+				{
+					if(this.oChapters[sCurrentChapter].aConditions[i].sOp=="AND")
+					{
+						aAND.push(this._EvalCondition({ oCondition: this.oChapters[sCurrentChapter].aConditions[i] }));
+					}
+					else
+					{
+						aOR.push(this._EvalCondition({ oCondition: this.oChapters[sCurrentChapter].aConditions[i] }));
+					}
+				}
+				var bOR = false;
+				for(var i=0; i<aOR.length; i++)
+				{
+					bOR = (bOR || aOR[i]);
+				}
+				var bAND = true;
+				for(var i=0; i<aAND.length; i++)
+				{
+					bAND = bAND && aAND[i];
+					if(!bAND) break;
+				}
+				bAllowed = (bOR || bAND);
+			}
+		}
+		if(bAllowed && CLZ.bStrictOrder)
+		{
+			var iTargetIdx = $.inArray(oArgs.sSlideId, this.aSlideOrder);
+			var iCurrentIdx = $.inArray(CLZ.sCurrentSlideId, this.aSlideOrder);
+			if(iTargetIdx!=-1 && iCurrentIdx!=-1)
+			{
+				if($.inArray(oArgs.sSlideId, CLZ.aVisited)==-1)
+				{
+					if(iTargetIdx-iCurrentIdx>1)
+					{
+						bAllowed = false;
+					}
+				}
+			}
+		}
+		return bAllowed;
+	}
+}
+
 var CL =
 {
 	aToDestroy: [],
@@ -6202,7 +6823,9 @@ var CL =
 	},
 	oDurations: { fast: 250, normal: 400, slow: 800 },
 	oHandlers: {},
+	oLastEvt: {},
 	oMethods: {},
+	oPath: null,
 	ajAudio: {},
 	sDragObjectId: "",
 	sDummySWF: "../courseimages/dummy.swf",
@@ -7262,269 +7885,6 @@ var CL =
 		}
 		return false;
 	},
-	Get: function (oArgs)
-	{
-		if(oArgs==null) return [];
-		// target = slide|frame|group|object|param|method
-		// scope = module|slides|slide|masters|master|frame|groups|params|methods  > optional scope_by (dir|id), scope_id
-		// by = id|dir|type(+name) //|attr|text > target_id, target_dir, target_type
-		var jScope = [];
-		switch(oArgs.scope)
-		{
-			case "methods":
-			{
-				jScope = CL.jxMethods;
-				break;
-			}
-			case "params":
-			{
-				if(oArgs.scope_id==null || oArgs.scope_id=="")
-				{
-					jScope = CL.jxParams;
-				}
-				else
-				{
-					jScope = CL.jxParams.children("param[objectid='" + oArgs.scope_id + "']");
-				}
-				break;
-			}
-			case "groups":
-			{
-				if(oArgs.scope_id==null || oArgs.scope_id=="")
-				{
-					jScope = CL.jxGroups;
-				}
-				else
-				{
-					jScope = CL.jxGroups.children("group[id='" + oArgs.scope_id + "']")
-				}
-				break;
-			}
-			case "frame":
-			{
-				switch(oArgs.scope_by)
-				{
-					case "dir":
-					{
-						switch(oArgs.scope_dir)
-						{
-							case "next":
-							{
-								jScope = CL.oCurrent.jFrame.next();
-								break;
-							}
-							case "prev":
-							{
-								jScope = CL.oCurrent.jFrame.prev();
-								break;
-							}
-							case "first":
-							case "last":
-							{
-								jScope = CL.oCurrent.jSlide.find("frame:" + oArgs.dir);
-								break;
-							}
-							default:
-							{
-								return [];
-							}
-						}
-						break;
-					}
-					case "id":
-					default:
-					{
-						jScope = (oArgs.scope_id==null || oArgs.scope_id=="") ? CL.oCurrent.jFrame : CL.jxModule.find("frame[id='" + oArgs.scope_id + "']");
-						break;
-					}
-				}
-				break;
-			}
-			case "master":
-			{
-				switch(oArgs.scope_by)
-				{
-					case "dir":
-					{
-						switch(oArgs.scope_dir)
-						{
-							case "next":
-							{
-								jScope = CL.oCurrent.jMaster.next();
-								break;
-							}
-							case "prev":
-							{
-								jScope = CL.oCurrent.jMaster.prev();
-								break;
-							}
-							case "first":
-							case "last":
-							{
-								jScope = CL.axMasters.children("slide:" + oArgs.dir);
-								break;
-							}
-							default:
-							{
-								return [];
-							}
-						}
-						break;
-					}
-					case "id":
-					default:
-					{
-						jScope = (oArgs.scope_id==null || oArgs.scope_id=="") ? CL.oCurrent.jMaster : CL.axMasters.children("slide[id='" + oArgs.scope_id + "']");
-						break;
-					}
-				}
-				break;
-			}
-			case "masters":
-			{
-				jScope = CL.axMasters;
-				break;
-			}
-			case "slide":
-			{
-				var sSlideId;
-				switch(oArgs.scope_by)
-				{
-					case "dir":
-					{
-						if(CL.bAlternativePath)
-						{
-							sSlideId = CL.Call.Method({ type: "nav_025_structure", method: "GetSlideFromStructure", args: { pid: CL.jAlternativePath.attr("id"), directories: oArgs.scope_dir } });
-						}
-						else
-						{
-							switch(oArgs.scope_dir)
-							{
-								case "next":
-								{
-									jScope = CL.oCurrent.jSlide.next();
-									break;
-								}
-								case "prev":
-								{
-									jScope = CL.oCurrent.jSlide.prev();
-									break;
-								}
-								case "first":
-								case "last":
-								{
-									jScope = CL.axSlides.children("slide:" + oArgs.dir);
-									break;
-								}
-								default:
-								{
-									return [];
-								}
-							}
-						}
-						break;
-					}
-					case "id":
-					default:
-					{
-						sSlideId = (oArgs.scope_id==null || oArgs.scope_id=="") ? CL.oCurrent.sSlideId : oArgs.scope_id;
-						jScope = CL.axSlides.children("slide[id='" + sSlideId + "']");
-						break;
-					}
-				}
-				break;
-			}
-			case "slides":
-			{
-				jScope = CL.axSlides;
-				break;
-			}
-			case "module":
-			default:
-			{
-				jScope = CL.jxModule;
-				break;
-			}
-		}
-		if(jScope.length==0) return [];
-		
-		var jResult = [];
-		if(oArgs.target=="method")
-		{
-			jResult = CL.jxMethods.children("method[type='" + oArgs.target_type + "'][name='" + oArgs.target_name + "']");
-		}
-		else
-		{
-			switch(oArgs.by)
-			{
-				case "id":
-				{
-					switch(oArgs.target)
-					{
-						case "frame":
-						case "slide":
-						case "group":
-						case "object":
-						{
-							jResult = jScope.find(oArgs.target + "[id='" + oArgs.target_id + "']");
-							break;
-						}
-						case "param":
-						{
-							jResult = jScope.children("param[objectid='" + oArgs.target_id + "']");
-							break;
-						}
-					}
-					break;
-				}
-				case "type":
-				{
-					switch(oArgs.target)
-					{
-						case "object":
-						{
-							jResult = jScope.find("object[type='" + oArgs.target_type + "']");
-							break;
-						}
-					}
-					break;
-				}
-				case "dir":
-				{
-					switch(oArgs.target)
-					{
-						case "slide":
-						case "frame":
-						{
-							switch(oArgs.target_dir)
-							{
-								case "next":
-								{
-									jResult = jScope.next();
-									break;
-								}
-								case "prev":
-								{
-									jResult = jScope.prev();
-									break;
-								}
-								case "first":
-								case "last":
-								{
-									jResult = jScope.parent().children(oArgs.target + ":" + oArgs.target_dir);
-									break;
-								}
-							}
-							break;
-						}
-					}
-					break;
-				}
-			}
-		}
-			
-		return jResult;
-	},
 	Init: function (oArgs)
 	{
 		function GetURLParam(oArgs)
@@ -7785,44 +8145,12 @@ var CL =
 	{
 		Allowed: function (oArgs)
 		{
+			var bAllowed = true;
 			switch(oArgs.sTarget)
 			{
 				case "slide":
 				{
-					var iCurIdx = $.inArray(CLZ.sCurrentSlideId, CLPath);
-					if(oArgs.sDir!=null)
-					{
-						switch(oArgs.sDir)
-						{
-							case "next":
-							{
-								if(CLPath[iCurIdx+1]==null) return false;
-								break;
-							}
-							case "prev":
-							{
-								if(iCurIdx<=0) return false;
-								break;
-							}
-						}
-					}
-					else if(oArgs.sTargetId!=null)
-					{
-						if(CLZ.bStrictOrder)
-						{
-							var iTargetIdx = $.inArray(oArgs.sTargetId, CLPath);
-							if(iTargetIdx!=-1)
-							{
-								if($.inArray(oArgs.sTargetId, CLZ.aVisited)==-1)
-								{
-									if(iTargetIdx-iCurIdx>1)
-									{
-										return false;
-									}
-								}
-							}
-						}
-					}
+					bAllowed = CL.oPath._TargetAllowed({ sSlideId: ((oArgs.sDir!=null) ? CL.oPath._GetTargetSlideId({ sTarget: oArgs.sDir }) : oArgs.sTargetId) });
 					break;
 				}
 				case "frame":
@@ -7833,67 +8161,20 @@ var CL =
 						{
 							case "next":
 							{
-								if(CLF[CLZ.sCurrentFrameId].bIsLast) return false;
+								bAllowed = !CLF[CLZ.sCurrentFrameId].bIsLast;
 								break;
 							}
 							case "prev":
 							{
-								if(CLF[CLZ.sCurrentFrameId].bIsFirst) return false;
+								bAllowed = !CLF[CLZ.sCurrentFrameId].bIsFirst;
 								break;
 							}
 						}
 					}
-					else
-					{
-						// by ID
-					}					
 					break;
 				}
 			}
-			return true;
-			if(oArgs.subject==null || oArgs.selectby==null) return false;
-			var jStructure = CL.jxModule.find("object[type='nav_025_structure']");
-			if(jStructure.length > 1)
-			{
-				jStructure = $(jStructure[0]);
-			}
-			switch(oArgs.subject)
-			{
-				case "slide":
-				{
-					var sFromId = (oArgs.from==null || oArgs.from=="") ? CL.oCurrent.sSlideId : oArgs.from;
-					switch(oArgs.selectby)
-					{
-						case "id":
-						{
-							// from-to
-							if(oArgs.to==null || oArgs.to=="") break;
-							
-							break;
-						}
-						case "dir":
-						{
-							// current-dir
-							if(jStructure.length==1)
-							{
-								
-							}
-							else
-							{
-								
-							}
-							break;
-						}
-					}
-					break;
-				}
-			}
-			return false;
-		},
-		Chapter: function (oArgs)
-		{
-			var sSlideId = (oArgs==null) ? CLZ.sCurrentSlideId : oArgs.slideid;
-			return "Chapter";
+			return bAllowed;
 		},
 		Exists: function (oArgs)
 		{
@@ -7901,102 +8182,17 @@ var CL =
 		},
 		GetTarget: function (oArgs)
 		{
-			var jTarget;
 			var sTargetId = "";
-			var sFromId = (oArgs.from==null) ? CLZ.sCurrentSlideId : oArgs.from;
-			var iIdx = $.inArray(sFromId, CLPath);
 			switch(oArgs.sType)
 			{
 				case "slide":
 				{
-					switch(oArgs.sDir)
-					{
-						case "this":
-						{
-							sTargetId = CLZ.sCurrentSlideId;
-							break;
-						}
-						case "next":
-						{
-							if(iIdx!=-1 && CLPath[iIdx+1]!=null)
-							{
-								sTargetId = CLPath[iIdx+1];
-							}
-							break;
-						}
-						case "prev":
-						{
-							if(iIdx>0)
-							{
-								sTargetId = CLPath[iIdx-1];
-							}
-							break;
-						}
-						case "first":
-						{
-							sTargetId = CLPath[0];
-							break;
-						}
-						case "last":
-						{
-							sTargetId = CLPath[CLPath.length-1];
-							break;
-						}
-					}
+					sTargetId = CL.oPath._GetTargetSlideId({ sTarget: oArgs.sDir });
 					break;
 				}
 				case "frame":
 				{
-					var jxFrame = CL.axSlides.find("frame[id='" + CLZ.sCurrentFrameId + "']");
-					var jxTarget;
-					switch(oArgs.sDir)
-					{
-						case "this":
-						{
-							jxTarget = jxFrame;
-							break;
-						}
-						case "next":
-						{
-							jxTarget = jxFrame.next();
-							if(jxTarget.length==0)
-							{
-								if(iIdx!=-1 && CLPath[iIdx+1]!=null)
-								{
-									var jxSlide = CL.jxModule.find("slide[id='" + CLPath[iIdx+1] + "']");
-									jxTarget = jxSlide.find("frame:first");
-								}
-							}
-							break;
-						}
-						case "prev":
-						{
-							jxTarget = jxFrame.prev();
-							if(jxTarget.length==0)
-							{
-								if(iIdx!=-1 &&iIdx>0)
-								{
-									var jxSlide = CL.jxModule.find("slide[id='" + CLPath[iIdx-1] + "']");
-									jxTarget = jxSlide.find("frame:last");
-								}
-							}
-							break;
-						}
-						case "first":
-						{
-							jxTarget = jxFrame.parent().children(":first");
-							break;
-						}
-						case "last":
-						{
-							jxTarget = jxFrame.parent().children(":last");
-							break;
-						}
-					}
-					if(jxTarget.length!=0)
-					{
-						sTargetId = jxTarget.attr("id");
-					}
+					sTargetId = CL.oPath._GetTargetFrameId({ sTarget: oArgs.sDir });
 					break;
 				}
 			}
@@ -8091,14 +8287,7 @@ var CL =
 		},
 		Path: function (oArgs)
 		{
-			if(oArgs!=null)
-			{
-				/*if(oArgs.chapter==true)
-				{
-					for(var i=0; i<CLPath)
-				}*/
-			}
-			return CLPath;
+			return CL.oPath._GetSlideList(oArgs);
 		}
 	},
 	Object:
@@ -8415,6 +8604,7 @@ var CL =
 			var sExpr = String(oArgs.sExpr);
 			var bResult = false;
 			var nResult = 0;
+			var bEval = oArgs.bEval!=false;
 			if(sExpr.indexOf("#")==-1 && sExpr.indexOf("$")==-1 && sExpr.indexOf("@")==-1) // no vars/props/specs to eval
 			{
 				if(oArgs.bBool==true) // need boolean anyway
@@ -8455,9 +8645,9 @@ var CL =
 			}
 			else
 			{
-				sExpr = CL.Substitute.Property({ sString: sExpr, bEval: true });
-				sExpr = CL.Substitute.Variable({ sString: sExpr, bEval: true });
-				sExpr = CL.Substitute.Service({ sString: sExpr, bEval: true });
+				sExpr = CL.Substitute.Property({ sString: sExpr, bEval: bEval });
+				sExpr = CL.Substitute.Variable({ sString: sExpr, bEval: bEval });
+				sExpr = CL.Substitute.Service({ sString: sExpr, bEval: bEval });
 				if(sExpr.indexOf("++")!=-1)
 				{
 					var aParts = sExpr.split("++");
@@ -8511,7 +8701,22 @@ var CL =
 			}
 			else if(oArgs.respid!=null)
 			{
-				jxResponse = CL.jxModule.find("RESPONSE[name='" + oArgs.respid + "']");
+				if(oArgs.evt!=null)
+				{
+					var jObj = $(oArgs.evt.currentTarget).parents(".cl-object:first");
+					if(jObj.length!=0)
+					{
+						jxResponse = CL.jxModule.find("object[id='" + jObj.attr("id") + "'] > RESPONSE[name='" + oArgs.respid + "']");
+					}
+					else
+					{
+						jxResponse = CL.jxModule.find("RESPONSE[name='" + oArgs.respid + "']");
+					}
+				}
+				else
+				{
+					jxResponse = CL.jxModule.find("RESPONSE[name='" + oArgs.respid + "']");
+				}
 				sRespId = oArgs.respid;
 			}
 			else if((oArgs.leftrespid!=null || oArgs.rightrespid!=null) && oArgs.evt!=null)
@@ -8548,6 +8753,18 @@ var CL =
 			{
 				return false;
 			}
+			if(CL.oLastEvt.iTimestamp!=null && CL.oLastEvt.sRespId!=null) // IE twin events break
+			{
+				if(oArgs.evt!=null)
+				{
+					if(oArgs.evt.timeStamp==CL.oLastEvt.iTimestamp && sRespId==CL.oLastEvt.sRespId)
+					{
+						return false;
+					}
+				}
+			}
+			CL.oLastEvt.iTimestamp = (oArgs.evt!=null) ? oArgs.evt.timeStamp : null;
+			CL.oLastEvt.sRespId = sRespId;
 			var oThread = new Thread();
 			oThread.Load({ sRespId: sRespId, jxActions: jxResponse.children() });
 			oThread.sFrameId = CLZ.sCurrentFrameId; // !!!
@@ -9501,32 +9718,6 @@ var CL =
 			}
 		}
 	},
-	Slide:
-	{
-		Exists: function (oArgs)
-		{
-			switch(oArgs.selectby)
-			{
-				case "slideid":
-				{
-					if(oArgs.slideid==null || oArgs.slideid=="") break;
-					return (CL.axSlides.children("slide[id='" + oArgs.slideid + "']").length==1);
-					break;
-				}
-				case "dir":
-				{
-					if(oArgs.dir==null || oArgs.dir=="") break;
-					var sSlideId = (oArgs.from==null) ? CL.oCurrent.sSlideId : oArgs.from;
-					var jCurSlide = CL.axSlides.children("slide[id='" + sSlideId + "']");
-					if(jCurSlide.length!=1) break;
-					var jStructure = CL.Get.AlternativePath({});
-					if(jStructure.length)
-					break;
-				}
-			}
-			return false;
-		}
-	},
 	Sound:
 	{
 		Append: function (oArgs)
@@ -10164,12 +10355,12 @@ var CL =
 			{
 				CL.bAlternativePath = true;
 				CL.jAlternativePath = $(jPath[0]);
+				CL.oPath = new CLModulePath({ oPlayer: CL, sPathObjectId: jPath[0].getAttribute("id") });
 			}
-			// plain path only
-			CL.axSlides.each(function ()
+			else
 			{
-				CLPath.push($(this).attr("id"));
-			});
+				CL.oPath = new CLModulePath({ oPlayer: CL, sPathObjectId: null });
+			}
 			
 			$(CL.oBoard).html("");
 			if(!CLZ.bZoom)
@@ -10769,7 +10960,7 @@ var CL =
 							{
 								if(+CLJ[sKey].bModule==1)
 								{
-									sValue = +CLJ[sObjId].nRawScore;
+									sValue = +CLJ[sKey].nRawScore;
 									break;
 								}
 							}
@@ -10777,7 +10968,7 @@ var CL =
 						}
 						case "SLIDE":
 						{
-							sValue = CLS[CLZ.sCurrentSlideId].GetNumber();
+							sValue = CL.oPath._GetSlideNumber();
 							break
 						}
 						case "SLIDENAME":
@@ -10787,7 +10978,7 @@ var CL =
 						}
 						case "SLIDES":
 						{
-							sValue = CL.Navigation.Path().length;
+							sValue = CL.oPath._GetLength();
 							break
 						}
 						case "TIME":
@@ -11018,7 +11209,7 @@ var CL =
 							if(aSplittedByTags[i].toLowerCase().indexOf("<p")==0)
 							{
 								bHasPs = true;
-								for(var j=i+1; j<aSplittedByTags.length; i++)
+								for(var j=i+1; j<aSplittedByTags.length; j++)
 								{
 									if(aSplittedByTags[j].toLowerCase().indexOf("</p")==0)
 									{
@@ -11812,7 +12003,7 @@ var CLTOOLS =
 
 /* TRANSLATE LEGACY CALLS */
 function PlayObjectSound(argobj) { return true; }
-function processEvent(sResponseId) { CL.Resp.Process({ respid: sResponseId }); return true; }
+function processEvent(sResponseId) { CL.Resp.Process({ respid: sResponseId, evt: this.event }); return true; }
 function StartModule(sSlideId, sFrameId) { CL.Start({ sSlideId: sSlideId, sFrameId: sFrameId }); return true; }
 function processEventLR(sLeftResponseId, sRightResponseId, oEvt)
 {

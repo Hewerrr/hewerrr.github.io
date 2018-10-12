@@ -57,3 +57,5 @@ span.red {font-weight: normal;color:#e62c53}
 span.big {font-weight: normal;color:#e62c53;text-transform: uppercase}
 
 .pointer {cursor: pointer}
+
+#finish-course {cursor:pointer}
