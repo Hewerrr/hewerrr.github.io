@@ -1,4 +1,4 @@
-var cacheName = 'videoPWA-6';
+var cacheName = 'videoPWA-7';
 
 var filesToCache = [
     './',
@@ -13,6 +13,8 @@ var filesToCache = [
     "./1/images/12_ogl.jpg",
     "./1/images/1_big.jpg",
     "./1/images/1st_slide_bg.png",
+    "./1/images/1v.wav",
+    "./1/images/1v_.wav",
     "./1/images/2_big.jpg",
     "./1/images/2_ogl.jpg",
     "./1/images/3_big.jpg",
@@ -33,6 +35,8 @@ var filesToCache = [
     "./1/images/begin.svg",
     "./1/images/big_green_block.svg",
     "./1/images/course.css",
+    "./1/images/coursename.wav",
+    "./1/images/end.wav",
     "./1/images/finishbutton_blue.svg",
     "./1/images/finishbutton_gray.svg",
     "./1/images/finishbutton_green.svg",
@@ -307,6 +311,8 @@ var filesToCache = [
     "./1/images/s_9_2.wav",
     "./1/images/s_9_3.wav",
     "./1/images/seagreenblock_bottom.svg",
+    "./1/images/sing1.wav",
+    "./1/images/sing2.wav",
     "./1/images/siz_frame.svg",
     "./1/images/tiles.svg",
     "./1/images/titul_bg.png",
@@ -314,6 +320,15 @@ var filesToCache = [
     "./1/images/tts.wav",
     "./1/images/tts_2.wav",
     "./1/images/tts_3.wav",
+    "./1/images/vi_1.wav",
+    "./1/images/vi_2.wav",
+    "./1/images/vi_3.wav",
+    "./1/images/vi_4.wav",
+    "./1/images/vi_5.wav",
+    "./1/images/vi_6.wav",
+    "./1/images/vi_7.wav",
+    "./1/images/vi_8.wav",
+    "./1/images/vi_9.wav",
     "./1/images/vid10.mp4",
     "./1/images/vid11.mp4",
     "./1/images/vid12.mp4",

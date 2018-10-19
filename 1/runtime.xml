@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Presentation file, saved 10/11/2018 2:21:21 PM using CourseLab 171119 -->
+<!-- Presentation file, saved 10/18/2018 5:47:20 PM using CourseLab 171119 -->
 <module>
 <runtime preview_fullscreen="yes" preview_fitwindow="yes" fit_small_window="yes" showsplash="no" seqslides="no" preloadimages="yes" normalize="no"/>
 <groups>
@@ -218,6 +218,60 @@
 </group>
 </groups>
 <slides>
+<slide id="rule_143" sid="3m" masterid="rule_73" advance="wait" transition="-1" durout="0" name="Без названия" indent="0">
+<frames>
+<frame id="rule_144" dur="0" infinite="0">
+<object id="TXT_1387" x="0" y="0" w="1034" h="623" z="100" display="frame" begin="0">
+<data>
+<![CDATA[<div style="width: 1034px; height: 623px; box-sizing: border-box;"><div style="background-color:#E5E7E9; width:100%; height:100%; color:#E5E7E9">&nbsp;</div></div>]]>
+</data>
+</object>
+<object id="IMG_130" x="682" y="116" w="331" h="451" z="101" display="frame" begin="0" preload="images/titul_bg.png">
+<data>
+<![CDATA[<img src="images/titul_bg.png" style="width: 331px; height: 451px;border-width: 0px;"/>]]>
+</data>
+</object>
+<object id="TXT_1388" x="182" y="59" w="670" h="500" z="102" display="frame" begin="0">
+<data>
+<![CDATA[<div style="width: 670px; height: 500px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/titul_boxes.svg" /></p></div>]]>
+</data>
+</object>
+<object id="TXT_1389" x="180" y="466" w="165" h="44" z="103" display="frame" begin="0">
+<data>
+<![CDATA[<div style="width: 165px; height: 44px; box-sizing: border-box;"><p class="titul">ОТ_203.4
+</p></div>]]>
+</data>
+</object>
+<object id="TXT_1390" x="259" y="285" w="518" h="55" z="104" display="frame" begin="0">
+<data>
+<![CDATA[<div style="width: 518px; height: 55px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_1390_1', evt: oEvt });return false;"><p class="titul2">Обеспечение безопасности при выполнении газопламенных работ
+</p></div>]]>
+</data>
+<RESPONSE name="TXT_1390_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images\coursename.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_126">
+</GOTO>
+</SEQ>
+</RESPONSE>
+</object>
+<object id="TXT_1391" x="692" y="399" w="160" h="160" z="105" display="frame" begin="0">
+<data>
+<![CDATA[<div style="width: 160px; height: 160px; box-sizing: border-box;cursor: pointer;" onclick="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_1391_1', evt: oEvt });return false;"><img src="images/begin.svg" title="Начать обучение"></div>]]>
+</data>
+<RESPONSE name="TXT_1391_1" event="onclick" type="link">
+<GOTO option="3" fs_frame="" pid="">
+</GOTO>
+</RESPONSE>
+</object>
+<timeline>
+</timeline>
+</frame>
+</frames>
+</slide>
 <slide id="rule_125" sid="2y" masterid="rule_73" advance="wait" transition="-1" durout="0" name="Содержание" indent="0">
 <frames>
 <frame id="rule_126" dur="129000" infinite="0">
@@ -309,8 +363,7 @@
 </RESPONSE>
 <object id="TXT_670" x="18" y="22" w="419" h="517" z="100" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 419px; height: 517px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_670_1', evt: oEvt });return false;"><p style="text-align: center;"><img border="0" src="images/tiles.svg" />
-</p></div>]]>
+<![CDATA[<div style="width: 419px; height: 517px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_670_1', evt: oEvt });return false;"><p style="text-align: center;"><img border="0" src="images/tiles.svg" /></p></div>]]>
 </data>
 <RESPONSE name="TXT_670_1" event="ondisplay" type="link">
 <IF type="score" fs_expression="" if="" fs_confirm="" confirm="" fs_drop="" objectid="" fs_objective="" pid="check2" fs_cs="" cs="c" fs_ss="" ss="p" fs_score="" oid="" condition="eq" score="0">
@@ -775,8 +828,12 @@
 <![CDATA[<div class="cl-wrapper" style="cursor: pointer;" onclick="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_199_1', evt: oEvt });return false;" onmouseover="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_199_2', evt: oEvt });return false;" onmouseout="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_199_3', evt: oEvt });return false;"><div class="style-custom" style="display: none" ><div class="rule" data-name="#menu_199 .cl-btn"><span class="rule-static">width: 95px; height: 95px;</span></div></div><div class="cl-container unselectable" ><div class="cl-btn idle"><img border="0" class="cl-img-idle" src="images/rule1_95_blue.svg" title="" /><img border="0" class="cl-img-over" src="images/rule1_95_green.svg" title="" /><img border="0" class="cl-img-disabled" src="images/rule1_95_gray.svg" title="" /></div></div></div>]]>
 </data>
 <RESPONSE name="menu_199_1" event="onclick" type="link">
+<VARIABLE name="1ok" value="1" global="1">
+</VARIABLE>
 <GOTO option="0" fs_frame="" pid="rule_52">
 </GOTO>
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check1" fs_score="" oid="" additive="sum" score="1" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 </RESPONSE>
 <RESPONSE name="menu_199_2" event="onmouseover" type="link">
 <DISPLAY pid="info_i" display="none" transition="0" fs_dur="" dur="0">
@@ -820,8 +877,12 @@
 <![CDATA[<div class="cl-wrapper" style="cursor: pointer;" onclick="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_200_1', evt: oEvt });return false;" onmouseover="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_200_2', evt: oEvt });return false;" onmouseout="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_200_3', evt: oEvt });return false;"><div class="style-custom" style="display: none" ><div class="rule" data-name="#menu_200 .cl-btn"><span class="rule-static">width: 95px; height: 95px;</span></div></div><div class="cl-container unselectable" ><div class="cl-btn idle"><img border="0" class="cl-img-idle" src="images/rule2_95_blue.svg" title="" /><img border="0" class="cl-img-over" src="images/rule2_95_green.svg" title="" /><img border="0" class="cl-img-disabled" src="images/rule2_95_gray.svg" title="" /></div></div></div>]]>
 </data>
 <RESPONSE name="menu_200_1" event="onclick" type="link">
+<VARIABLE name="2ok" value="1" global="1">
+</VARIABLE>
 <GOTO option="0" fs_frame="" pid="rule_7">
 </GOTO>
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check1" fs_score="" oid="" additive="sum" score="1" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 </RESPONSE>
 <RESPONSE name="menu_200_2" event="onmouseover" type="link">
 <DISPLAY pid="info_i" display="none" transition="0" fs_dur="" dur="0">
@@ -863,8 +924,12 @@
 <![CDATA[<div class="cl-wrapper" style="cursor: pointer;" onclick="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_201_1', evt: oEvt });return false;" onmouseover="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_201_2', evt: oEvt });return false;" onmouseout="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_201_3', evt: oEvt });return false;"><div class="style-custom" style="display: none" ><div class="rule" data-name="#menu_201 .cl-btn"><span class="rule-static">width: 95px; height: 95px;</span></div></div><div class="cl-container unselectable" ><div class="cl-btn idle"><img border="0" class="cl-img-idle" src="images/rule3_95_blue.svg" title="" /><img border="0" class="cl-img-over" src="images/rule3_95_green.svg" title="" /><img border="0" class="cl-img-disabled" src="images/rule3_95_gray.svg" title="" /></div></div></div>]]>
 </data>
 <RESPONSE name="menu_201_1" event="onclick" type="link">
+<VARIABLE name="3ok" value="1" global="1">
+</VARIABLE>
 <GOTO option="0" fs_frame="" pid="rule_9">
 </GOTO>
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check1" fs_score="" oid="" additive="sum" score="1" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 </RESPONSE>
 <RESPONSE name="menu_201_2" event="onmouseover" type="link">
 <DISPLAY pid="info_i" display="none" transition="0" fs_dur="" dur="0">
@@ -2249,6 +2314,11 @@
 <![CDATA[<div style="width: 200px; height: 95px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/finishbutton_gray.svg" /></p></div>]]>
 </data>
 </object>
+<object id="menu_170" x="400" y="625" w="200" h="100" z="181" display="frame" begin="0" type="009_storage">
+<data>
+<![CDATA[<div class="cl-wrapper" style=""><div style="display: none" ><div>images/sing2.wav</div><div>images/sing1.wav</div></div></div>]]>
+</data>
+</object>
 <timeline>
 </timeline>
 </frame>
@@ -2284,9 +2354,7 @@
 </data>
 <RESPONSE name="TXT_118_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/tts.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="4000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_5">
 </GOTO>
@@ -2341,108 +2409,238 @@
 </object>
 <object id="TXT_111" x="111" y="463" w="409" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_111_1', evt: oEvt });return false;"><TABLE style="HEIGHT: 100%; WIDTH: 100%" cellSpacing=0 cellPadding=0 border=0>
-<TBODY>
-<TR>
-<TD style="VERTICAL-ALIGN: middle">
-<P class=titul style="TEXT-ALIGN: center">Правильно применяйте средства индивидуальной защиты!</P></TD></TR></TBODY></TABLE></div>]]>
+<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_111_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+	<tbody>
+		<tr>
+			<td style="VERTICAL-ALIGN: middle">
+			<p class="titul" style="TEXT-ALIGN: center">Правильно применяйте средства индивидуальной защиты!</p>
+			</td>
+		</tr>
+	</tbody>
+</table></div>]]>
 </data>
 <RESPONSE name="TXT_111_1" event="ondisplay" type="link">
 <SEQ>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/tts_2.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="7500">
+<WAIT dur="11300">
 </WAIT>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="1_group" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/tts_3.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="50500">
+<WAIT dur="39000">
 </WAIT>
-<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="2_group" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_2.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="20000">
+<WAIT dur="19600">
 </WAIT>
-<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="8_group" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_8.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="10000">
+<WAIT dur="10500">
 </WAIT>
-<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="1000">
+<DISPLAY pid="4_group" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
-<DISPLAY pid="4_group" display="inline" transition="0" fs_dur="" dur="1000">
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_4.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="10000">
+<WAIT dur="11500">
 </WAIT>
-<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="5_group" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_5.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="11000">
+<WAIT dur="10600">
 </WAIT>
-<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="3_group" display="inline" transition="0" fs_dur="" dur="1000">
+</DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_3.wav" fs_object="" pid="">
 </MEDIAPLAY>
 <WAIT dur="35000">
 </WAIT>
-<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="6_group" display="inline" transition="0" fs_dur="" dur="1000">
+</DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_6.wav" fs_object="" pid="">
 </MEDIAPLAY>
 <WAIT dur="13000">
 </WAIT>
-<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <DISPLAY pid="7_group" display="inline" transition="0" fs_dur="" dur="1000">
+</DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_7.wav" fs_object="" pid="">
 </MEDIAPLAY>
 <WAIT dur="9000">
 </WAIT>
-<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <DISPLAY pid="ramka1" display="inline" transition="0" fs_dur="" dur="0">
 </DISPLAY>
-<DISPLAY pid="9_group" display="inline" transition="0" fs_dur="" dur="1000">
+<DISPLAY pid="9_group" display="inline" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="1_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="2_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="3_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="4_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="5_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="6_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="8_group" display="none" transition="0" fs_dur="" dur="0">
+</DISPLAY>
+<DISPLAY pid="7_group" display="none" transition="0" fs_dur="" dur="0">
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/gr_9.wav" fs_object="" pid="">
 </MEDIAPLAY>
 <WAIT dur="13000">
 </WAIT>
-<DISPLAY pid="9_group" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
 <GOTO option="0" fs_frame="" pid="rule_142">
 </GOTO>
 </SEQ>
@@ -2481,10 +2679,11 @@
 </p></div>]]>
 </data>
 </object>
-<object id="txt_for_8" x="444" y="141" w="77" h="70" z="109" display="frame" begin="0">
+<object id="txt_for_8" x="444" y="141" w="114" h="70" z="109" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 77px; height: 70px; box-sizing: border-box;"><p class="osnova_left">СИЗ от падения с высоты
-</p></div>]]>
+<![CDATA[<div style="width: 114px; height: 70px; box-sizing: border-box;"><p class="osnova_left">СИЗ<br />
+от падения<br />
+с высоты</p></div>]]>
 </data>
 </object>
 <object id="TXT_851" x="444" y="352" w="99" h="66" z="110" display="frame" begin="0">
@@ -2964,7 +3163,7 @@
 </object>
 <object id="TXT_842" x="591" y="37" w="407" h="502" z="143" display="none" begin="0">
 <data>
-<![CDATA[<div style="width: 407px; height: 502px; box-sizing: border-box;"><p class="osnova_left" style="MARGIN-BOTTOM: 5px">При выполнении работ на производстве, где проводятся работы с использованием грузоподъемных механизмов, связанных с&nbsp;риском соприкосновения с токоведущими деталями, риском воздействия электрической дуги и попадания брызг расплавленного металла и окалины, работ на высоте или в зоне возможного падения предметов с&nbsp;высоты, в&nbsp;помещениях и открытых распределительных устройствах с электрооборудованием (за&nbsp;исключением щитов управления, релейных и им подобных), в подземных сооружениях, колодцах, туннелях, траншеях и котлованах, участвующим в обслуживании и ремонте воздушных линий, дополнительно применяйте:
+<![CDATA[<div style="width: 407px; height: 502px; box-sizing: border-box;"><p class="osnova_left" style="MARGIN-BOTTOM: 5px">При выполнении работ на производстве, где проводятся работы с использованием грузоподъемных механизмов, связанных с&nbsp;риском соприкосновения с токоведущими деталями, риском воздействия электрической дуги и попадания брызг расплавленного металла и окалины, работ на высоте или в зоне возможного падения предметов с&nbsp;высоты, в&nbsp;помещениях и открытых распределительных устройствах с электрооборудованием, в подземных сооружениях, колодцах, туннелях, траншеях и котлованах, дополнительно применяйте:
 </p>
 <p class="osnova_marker_gray_5">каску;
 </p>
@@ -3218,9 +3417,7 @@
 </data>
 <RESPONSE name="TXT_20_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_2.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="6000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_54">
 </GOTO>
@@ -3279,12 +3476,6 @@
 <slide id="rule_53" sid="1a" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 2" indent="0">
 <frames>
 <frame id="rule_54" dur="0" infinite="0">
-<RESPONSE name="rule_54_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_20">
-</GOTO>
-</RESPONSE>
 <object id="IMG_73" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/2_big.jpg">
 <data>
 <![CDATA[<img src="images/2_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -3297,7 +3488,7 @@
 </object>
 <object id="TXT_21" x="101" y="462" w="402" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 402px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 402px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_21_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
 	<tbody>
 		<tr>
 			<td style="VERTICAL-ALIGN: middle">
@@ -3307,6 +3498,16 @@
 	</tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_21_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_2.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_20">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_612" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -3552,7 +3753,7 @@
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/pravilo2_6_2.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="16000">
+<WAIT dur="14000">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_87">
 </GOTO>
@@ -3615,7 +3816,7 @@
 </object>
 <object id="TXT_1151" x="48" y="465" w="919" h="68" z="112" display="none" begin="0">
 <data>
-<![CDATA[<div style="width: 919px; height: 68px; box-sizing: border-box;"><div class="osnova_marker_gray_15">В холодный период года при выполнении газопламенных работ в помещении (цехе) заготовки и детали, подлежащие сварке, подавайте в помещение (цех) заранее, чтобы к началу сварки их температура была не ниже температуры воздуха в помещении (цехе)
+<![CDATA[<div style="width: 919px; height: 68px; box-sizing: border-box;"><div class="osnova_marker_gray_15">В холодный период года при выполнении газопламенных работ в помещении заготовки и детали, подлежащие сварке, подавайте в помещение заранее, чтобы к началу сварки их температура была не ниже температуры воздуха в помещении 
 </div></div>]]>
 </data>
 </object>
@@ -3635,17 +3836,15 @@
 <frames>
 <frame id="rule_87" dur="0" infinite="0">
 <RESPONSE name="rule_87_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="3" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_149" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_149" method="PLAY">
 </METHOD>
-<WAIT dur="39000">
+<WAIT dur="18000">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="3" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -3660,7 +3859,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_152" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_152" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -3706,23 +3905,26 @@
 </object>
 <object id="menu_149" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_149_HTML5" src="images/vid2.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_149_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_149_HTML5" src="images/vid2.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_149_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_149_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_1.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6000">
 </WAIT>
-<DISPLAY pid="menu_149" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_20" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_721" x="463" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+<![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" /></p>
+
+<audio autoplay="" src="images\sing2.wav">&nbsp;</audio></div>]]>
 </data>
 </object>
 <object id="TXT_722" x="487" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -3788,9 +3990,7 @@
 </data>
 <RESPONSE name="TXT_23_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_3.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="4500">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_57">
 </GOTO>
@@ -3853,12 +4053,6 @@
 <slide id="rule_56" sid="1b" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 3" indent="0">
 <frames>
 <frame id="rule_57" dur="0" infinite="0">
-<RESPONSE name="rule_57_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_24">
-</GOTO>
-</RESPONSE>
 <object id="IMG_76" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/3_big.jpg">
 <data>
 <![CDATA[<img src="images/3_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -3872,7 +4066,7 @@
 </object>
 <object id="TXT_48" x="103" y="463" w="425" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 425px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 425px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_48_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -3883,6 +4077,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_48_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_3.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4500">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_24">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_613" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -4190,15 +4394,15 @@
 <frames>
 <frame id="rule_91" dur="0" infinite="0">
 <RESPONSE name="rule_91_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="4" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_150" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_150" method="PLAY">
 </METHOD>
-<WAIT dur="21000">
+<WAIT dur="14900">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="4" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -4213,7 +4417,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_158" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_158" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -4260,23 +4464,26 @@
 </object>
 <object id="menu_150" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_150_HTML5" src="images/vid3.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_150_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_150_HTML5" src="images/vid3.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_150_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_150_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_2.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="7700">
 </WAIT>
-<DISPLAY pid="menu_150" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_21" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_716" x="463" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+<![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" /></p>
+
+<audio autoplay="" src="images\sing2.wav">&nbsp;</audio></div>]]>
 </data>
 </object>
 <object id="TXT_835" x="487" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -4344,9 +4551,7 @@
 </data>
 <RESPONSE name="TXT_26_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_4.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5500">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_59">
 </GOTO>
@@ -4405,12 +4610,6 @@
 <slide id="rule_58" sid="1c" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 4" indent="0">
 <frames>
 <frame id="rule_59" dur="0" infinite="0">
-<RESPONSE name="rule_59_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_28">
-</GOTO>
-</RESPONSE>
 <object id="IMG_121" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/4_big.jpg">
 <data>
 <![CDATA[<img src="images/4_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -4424,7 +4623,7 @@
 </object>
 <object id="TXT_49" x="104" y="462" w="397" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 397px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 397px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_49_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
 	<tbody>
 		<tr>
 			<td style="VERTICAL-ALIGN: middle">
@@ -4435,6 +4634,16 @@
 	</tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_49_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_4.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5500">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_28">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1238" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -4496,14 +4705,13 @@
 <object id="menu_135" x="8" y="63" w="1018" h="55" z="101" display="frame" begin="0" type="basic_textbox">
 <data>
 <![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_135_1', evt: oEvt });return false;"><div class="cl-container cl-theme-custom unselectable" ><div class="style-custom" data-ie9="1" style="display: none"><div class="rule" data-name="#menu_135 .cl-outer-box"><span class="rule-dynamic" data-type="linear-gradient" data-angle="0" data-colors="#1378BC|0;#1378BC|100" data-ie9="1" /></div></div><div class="cl-outer-box  unselectable" style="width: 1018px; height: 55px; overflow: hidden;  background-color: #1378BC; border-width: 0px; border-style: none; border-color: #1378BC; background-image: -o-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -ms-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -moz-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -webkit-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: linear-gradient(0deg,#1378BC 0%,#1378BC 100%); -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;"><div class="cl-txt-container" style="width: 1018px; height: 55px; padding: 0px;"><div class="cl-txt-box" style="width: 1018px; height: 55px; overflow: hidden;"><table class="cl-txt-box-table" style="width: 1018px; border-spacing: 0; min-height: 55px;"><tr><td class="cl-txt-box-cell " style="width: 1018px; padding: 0; vertical-align: middle; min-height: 55px;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
-  <tbody>
-    <tr>
-      <td style="VERTICAL-ALIGN: middle">
-        <p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования по охране труда перед выполнением газопламенных работ  
-        </p>
-      </td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<td style="VERTICAL-ALIGN: middle">
+			<p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны труда перед выполнением газопламенных работ</p>
+			</td>
+		</tr>
+	</tbody>
 </table></td></tr></table></div></div></div></div></div>]]>
 </data>
 <RESPONSE name="menu_135_1" event="ondisplay" type="link">
@@ -4637,7 +4845,7 @@
 </DISPLAY>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/pravilo4_2_2.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="8000">
+<WAIT dur="7000">
 </WAIT>
 <DISPLAY pid="TXT_1270" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
@@ -4731,7 +4939,7 @@
 </object>
 <object id="TXT_1243" x="48" y="214" w="933" h="47" z="109" display="none" begin="0">
 <data>
-<![CDATA[<div style="width: 933px; height: 47px; box-sizing: border-box;"><div class="osnova_marker_red_10"><span class="red">ЗАПРЕЩАЕТСЯ</span> уменьшать нагрузку на руку с помощью переброски шланга (кабеля) через плечо или&nbsp;навивки его на руку
+<![CDATA[<div style="width: 933px; height: 47px; box-sizing: border-box;"><div class="osnova_marker_red_10"><span class="red">ЗАПРЕЩАЕТСЯ</span> уменьшать нагрузку на руку с помощью переброски шланга через плечо или&nbsp;навивки его на руку
 </div></div>]]>
 </data>
 </object>
@@ -4775,15 +4983,15 @@
 <frames>
 <frame id="rule_93" dur="0" infinite="0">
 <RESPONSE name="rule_93_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="5" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_151" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_151" method="PLAY">
 </METHOD>
-<WAIT dur="39000">
+<WAIT dur="18000">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="5" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -4798,7 +5006,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_162" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_162" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -4843,23 +5051,27 @@
 </object>
 <object id="menu_151" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_151_HTML5" src="images/vid4.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_151_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_151_HTML5" src="images/vid4.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_151_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_151_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_4.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
 </WAIT>
-<DISPLAY pid="menu_151" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_22" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_979" x="463" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_980" x="487" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -4925,9 +5137,7 @@
 </data>
 <RESPONSE name="TXT_28_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_5.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5500">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_61">
 </GOTO>
@@ -5010,12 +5220,6 @@
 <slide id="rule_60" sid="1d" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 5" indent="0">
 <frames>
 <frame id="rule_61" dur="0" infinite="0">
-<RESPONSE name="rule_61_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_32">
-</GOTO>
-</RESPONSE>
 <object id="IMG_71" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/5_big.jpg">
 <data>
 <![CDATA[<img src="images/5_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -5029,7 +5233,7 @@
 </object>
 <object id="TXT_50" x="125" y="463" w="355" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 355px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 355px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_50_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
 	<tbody>
 		<tr>
 			<td style="VERTICAL-ALIGN: middle">
@@ -5039,6 +5243,16 @@
 	</tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_50_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_5.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5500">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_32">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1241" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -5129,21 +5343,20 @@
 <object id="menu_139" x="8" y="63" w="1018" h="55" z="102" display="frame" begin="0" type="basic_textbox">
 <data>
 <![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_139_1', evt: oEvt });return false;"><div class="cl-container cl-theme-custom unselectable" ><div class="style-custom" data-ie9="1" style="display: none"><div class="rule" data-name="#menu_139 .cl-outer-box"><span class="rule-dynamic" data-type="linear-gradient" data-angle="0" data-colors="#1378BC|0;#1378BC|100" data-ie9="1" /></div></div><div class="cl-outer-box  unselectable" style="width: 1018px; height: 55px; overflow: hidden;  background-color: #1378BC; border-width: 0px; border-style: none; border-color: #1378BC; background-image: -o-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -ms-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -moz-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: -webkit-linear-gradient(90deg,#1378BC 0%,#1378BC 100%); background-image: linear-gradient(0deg,#1378BC 0%,#1378BC 100%); -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;"><div class="cl-txt-container" style="width: 1018px; height: 55px; padding: 0px;"><div class="cl-txt-box" style="width: 1018px; height: 55px; overflow: hidden;"><table class="cl-txt-box-table" style="width: 1018px; border-spacing: 0; min-height: 55px;"><tr><td class="cl-txt-box-cell " style="width: 1018px; padding: 0; vertical-align: middle; min-height: 55px;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
-  <tbody>
-    <tr>
-      <td style="VERTICAL-ALIGN: middle">
-        <p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны при эксплуатации баллонов со сжиженным газом
-        </p>
-      </td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<td style="VERTICAL-ALIGN: middle">
+			<p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны труда при эксплуатации баллонов со сжиженным газом</p>
+			</td>
+		</tr>
+	</tbody>
 </table></td></tr></table></div></div></div></div></div>]]>
 </data>
 <RESPONSE name="menu_139_1" event="ondisplay" type="link">
 <SEQ>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/s_5.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="4500">
+<WAIT dur="5300">
 </WAIT>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/pravilo5_1_1.wav" fs_object="" pid="">
 </MEDIAPLAY>
@@ -5237,7 +5450,7 @@
 </p></div>]]>
 </data>
 </object>
-<object id="TXT_1305" x="48" y="136" w="927" h="89" z="113" display="frame" begin="3500">
+<object id="TXT_1305" x="48" y="136" w="927" h="89" z="113" display="frame" begin="4300">
 <data>
 <![CDATA[<div style="width: 927px; height: 89px; box-sizing: border-box;"><div class="osnova_marker_red_10">При эксплуатации баллонов с газами <span class="red">НЕ ДОПУСКАЕТСЯ</span> расходовать находящийся в них газ полностью. Для конкретного типа газа с учетом его свойств остаточное давление в баллоне устанавливается технической документацией организации - изготовителя баллонов и должно быть <span class="red">не менее 0,05 МПа (0,5&nbsp;кгс/см<sup>2</sup>)</span>, если иное не предусмотрено техническими условиями на газ
 </div></div>]]>
@@ -5268,7 +5481,7 @@
 </data>
 </object>
 <timeline>
-<timeaction type="display" begin="3500" targetid="TXT_1305"/>
+<timeaction type="display" begin="4300" targetid="TXT_1305"/>
 </timeline>
 </frame>
 </frames>
@@ -6099,15 +6312,15 @@
 <frames>
 <frame id="rule_97" dur="0" infinite="0">
 <RESPONSE name="rule_97_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="6" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_152" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_152" method="PLAY">
 </METHOD>
-<WAIT dur="31000">
+<WAIT dur="14000">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="6" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -6122,7 +6335,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_166" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_166" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -6169,23 +6382,27 @@
 </object>
 <object id="menu_152" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_152_HTML5" src="images/vid5.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_152_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_152_HTML5" src="images/vid5.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_152_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_152_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_5.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
 </WAIT>
-<DISPLAY pid="menu_152" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_23" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_918" x="415" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_919" x="439" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -6274,9 +6491,7 @@
 </data>
 <RESPONSE name="TXT_30_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_6.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_63">
 </GOTO>
@@ -6329,12 +6544,6 @@
 <slide id="rule_62" sid="1e" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 6" indent="0">
 <frames>
 <frame id="rule_63" dur="0" infinite="0">
-<RESPONSE name="rule_63_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_90">
-</GOTO>
-</RESPONSE>
 <object id="IMG_84" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/6_big.jpg">
 <data>
 <![CDATA[<img src="images/6_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -6348,7 +6557,7 @@
 </object>
 <object id="TXT_51" x="98" y="462" w="410" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 410px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 410px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_51_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -6359,6 +6568,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_51_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_6.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_90">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_404" x="478" y="580" w="17" h="15" z="103" display="frame" begin="0">
 <data>
@@ -6531,15 +6750,15 @@
 <frames>
 <frame id="rule_106" dur="0" infinite="0">
 <RESPONSE name="rule_106_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="7" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_153" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_153" method="PLAY">
 </METHOD>
-<WAIT dur="33000">
+<WAIT dur="15500">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="7" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -6554,7 +6773,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_170" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_170" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -6601,23 +6820,27 @@
 </object>
 <object id="menu_153" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_153_HTML5" src="images/vid6.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_153_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_153_HTML5" src="images/vid6.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_153_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_153_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_3.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
 </WAIT>
-<DISPLAY pid="menu_153" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_24" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_992" x="478" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_998" x="502" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -6676,9 +6899,7 @@
 </data>
 <RESPONSE name="TXT_32_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_7.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5800">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_65">
 </GOTO>
@@ -6743,12 +6964,6 @@
 <slide id="rule_64" sid="1f" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 7" indent="0">
 <frames>
 <frame id="rule_65" dur="0" infinite="0">
-<RESPONSE name="rule_65_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_36">
-</GOTO>
-</RESPONSE>
 <object id="IMG_92" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/7_big.jpg">
 <data>
 <![CDATA[<img src="images/7_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -6762,7 +6977,7 @@
 </object>
 <object id="TXT_52" x="98" y="463" w="409" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_52_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -6775,6 +6990,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_52_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_7.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5800">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_36">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1005" x="454" y="580" w="17" h="15" z="103" display="frame" begin="0">
 <data>
@@ -7187,15 +7412,15 @@
 <frames>
 <frame id="rule_108" dur="0" infinite="0">
 <RESPONSE name="rule_108_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="8" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_154" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_154" method="PLAY">
 </METHOD>
-<WAIT dur="21000">
+<WAIT dur="12300">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="8" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -7210,7 +7435,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_174" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_174" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -7257,23 +7482,27 @@
 </object>
 <object id="menu_154" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_154_HTML5" src="images/vid7.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_154_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_154_HTML5" src="images/vid7.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_154_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_154_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_4.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
 </WAIT>
-<DISPLAY pid="menu_154" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_25" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_1030" x="454" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_1031" x="478" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -7345,9 +7574,7 @@
 </data>
 <RESPONSE name="TXT_34_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_8.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_67">
 </GOTO>
@@ -7406,12 +7633,6 @@
 <slide id="rule_66" sid="1g" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 8" indent="0">
 <frames>
 <frame id="rule_67" dur="0" infinite="0">
-<RESPONSE name="rule_67_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_50">
-</GOTO>
-</RESPONSE>
 <object id="IMG_93" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/8_big.jpg">
 <data>
 <![CDATA[<img src="images/8_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -7425,7 +7646,7 @@
 </object>
 <object id="TXT_53" x="98" y="462" w="409" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 409px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_53_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
 	<tbody>
 		<tr>
 			<td style="VERTICAL-ALIGN: middle">
@@ -7436,6 +7657,16 @@
 	</tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_53_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_8.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_50">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1250" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -7764,15 +7995,15 @@
 <frames>
 <frame id="rule_110" dur="0" infinite="0">
 <RESPONSE name="rule_110_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="9" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_155" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_155" method="PLAY">
 </METHOD>
-<WAIT dur="25000">
+<WAIT dur="13300">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="9" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -7787,7 +8018,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_179" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_179" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -7834,23 +8065,27 @@
 </object>
 <object id="menu_155" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_155_HTML5" src="images/vid8.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_155_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_155_HTML5" src="images/vid8.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_155_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_155_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_5.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6000">
 </WAIT>
-<DISPLAY pid="menu_155" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_26" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_1048" x="463" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_1049" x="487" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -7916,9 +8151,7 @@
 </data>
 <RESPONSE name="TXT_36_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_9.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5800">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_69">
 </GOTO>
@@ -7995,12 +8228,6 @@
 <slide id="rule_68" sid="1h" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 9" indent="0">
 <frames>
 <frame id="rule_69" dur="0" infinite="0">
-<RESPONSE name="rule_69_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_40">
-</GOTO>
-</RESPONSE>
 <object id="IMG_123" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/9_big.jpg">
 <data>
 <![CDATA[<img src="images/9_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -8014,7 +8241,7 @@
 </object>
 <object id="TXT_54" x="102" y="462" w="399" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 399px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 399px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_54_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -8025,6 +8252,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_54_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_9.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5800">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_40">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1252" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -8781,15 +9018,15 @@
 <frames>
 <frame id="rule_112" dur="0" infinite="0">
 <RESPONSE name="rule_112_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="10" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_156" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_156" method="PLAY">
 </METHOD>
-<WAIT dur="31000">
+<WAIT dur="17300">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="10" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -8804,7 +9041,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_183" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_183" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -8851,23 +9088,27 @@
 </object>
 <object id="menu_156" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_156_HTML5" src="images/vid9.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_156_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_156_HTML5" src="images/vid9.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_156_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_156_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_6.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="10000">
 </WAIT>
-<DISPLAY pid="menu_156" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_27" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_1096" x="430" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_1097" x="454" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -8950,9 +9191,7 @@
 </data>
 <RESPONSE name="TXT_38_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_10.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="5000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_71">
 </GOTO>
@@ -9041,12 +9280,6 @@
 <slide id="rule_70" sid="1i" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 10" indent="0">
 <frames>
 <frame id="rule_71" dur="0" infinite="0">
-<RESPONSE name="rule_71_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_42">
-</GOTO>
-</RESPONSE>
 <object id="IMG_101" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/10_big.jpg">
 <data>
 <![CDATA[<img src="images/10_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -9060,7 +9293,7 @@
 </object>
 <object id="TXT_55" x="101" y="463" w="404" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_55_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -9071,6 +9304,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_55_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_10.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="5000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_42">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1257" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -9448,7 +9691,7 @@
 </WAIT>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/prav10_3.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="71000">
+<WAIT dur="70000">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_116">
 </GOTO>
@@ -9587,7 +9830,7 @@
 </WAIT>
 <MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/prav10_4.wav" fs_object="" pid="">
 </MEDIAPLAY>
-<WAIT dur="28000">
+<WAIT dur="27000">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_124">
 </GOTO>
@@ -9608,7 +9851,7 @@
   </p>
   <p class="osnova_marker_list" style="MARGIN-TOP: 5px">допускать нахождение посторонних лиц в местах, где выполняются газопламенные работы;
   </p>
-  <p class="osnova_marker_list" style="MARGIN-TOP: 5px">уменьшать нагрузку на руку с помощью переброски шланга (кабеля) через плечо или навивки его на руку;
+  <p class="osnova_marker_list" style="MARGIN-TOP: 5px">уменьшать нагрузку на руку с помощью переброски шланга через плечо или навивки его на руку;
   </p>
   <p class="osnova_marker_list" style="MARGIN-TOP: 5px">проводить газопламенные работы с приставных лестниц и стремянок
   </p>
@@ -10149,15 +10392,15 @@
 <frames>
 <frame id="rule_114" dur="0" infinite="0">
 <RESPONSE name="rule_114_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="11" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_157" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_157" method="PLAY">
 </METHOD>
-<WAIT dur="55000">
+<WAIT dur="26500">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="11" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -10172,7 +10415,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_189" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_189" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -10219,23 +10462,27 @@
 </object>
 <object id="menu_157" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_157_HTML5" src="images/vid10.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_157_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_157_HTML5" src="images/vid10.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_157_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_157_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_7.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="8000">
 </WAIT>
-<DISPLAY pid="menu_157" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_28" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_1175" x="406" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing1.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_1176" x="430" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -10329,9 +10576,7 @@
 </data>
 <RESPONSE name="TXT_725_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_11.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="4400">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_135">
 </GOTO>
@@ -10395,12 +10640,6 @@
 <slide id="rule_134" sid="2H" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 11" indent="0">
 <frames>
 <frame id="rule_135" dur="0" infinite="0">
-<RESPONSE name="rule_135_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_137">
-</GOTO>
-</RESPONSE>
 <object id="IMG_122" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/11_big.jpg">
 <data>
 <![CDATA[<img src="images/11_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -10414,7 +10653,7 @@
 </object>
 <object id="TXT_735" x="101" y="463" w="404" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_735_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
   <tbody>
     <tr>
       <td style="VERTICAL-ALIGN: middle">
@@ -10425,6 +10664,16 @@
   </tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_735_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_11.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4400">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_137">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_1264" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -10753,15 +11002,15 @@
 <frames>
 <frame id="rule_150" dur="0" infinite="0">
 <RESPONSE name="rule_150_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="12" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_172" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_172" method="PLAY">
 </METHOD>
-<WAIT dur="27000">
+<WAIT dur="12700">
 </WAIT>
-<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="12" fs_cs="" cs="c" fs_ss="" ss="u">
-</SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
 </SEQ>
@@ -10776,7 +11025,7 @@
 <![CDATA[<img src="images/hide_grey.png" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
 </data>
 </object>
-<object id="TXT_793" x="98" y="102" w="839" h="359" z="102" display="none" begin="0">
+<object id="TXT_793" x="97" y="102" w="839" h="359" z="102" display="none" begin="0">
 <data>
 <![CDATA[<div style="width: 839px; height: 359px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/big_green_block.svg" />
 </p></div>]]>
@@ -10823,23 +11072,27 @@
 </object>
 <object id="menu_172" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_172_HTML5" src="images/vid11.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_172_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_172_HTML5" src="images/vid11.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_172_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_172_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_8.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4000">
 </WAIT>
-<DISPLAY pid="menu_172" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_32" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_751" x="463" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_752" x="487" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -10905,9 +11158,7 @@
 </data>
 <RESPONSE name="TXT_813_1" event="ondisplay" type="link">
 <SEQ>
-<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_12.wav" fs_object="" pid="">
-</MEDIAPLAY>
-<WAIT dur="6000">
+<WAIT dur="0">
 </WAIT>
 <GOTO option="0" fs_frame="" pid="rule_156">
 </GOTO>
@@ -10965,12 +11216,6 @@
 <slide id="rule_155" sid="2R" masterid="SLIDE_MASTER" advance="wait" transition="-1" durout="0" name="Правило 12" indent="0">
 <frames>
 <frame id="rule_156" dur="0" infinite="0">
-<RESPONSE name="rule_156_1" event="ondisplay" type="link">
-<WAIT dur="3000">
-</WAIT>
-<GOTO option="0" fs_frame="" pid="rule_158">
-</GOTO>
-</RESPONSE>
 <object id="IMG_109" x="8" y="8" w="1018" h="545" z="100" display="frame" begin="0" preload="images/12_big.jpg">
 <data>
 <![CDATA[<img src="images/12_big.jpg" style="width: 1018px; height: 545px;border-width: 0px;"/>]]>
@@ -10984,7 +11229,7 @@
 </object>
 <object id="TXT_823" x="101" y="463" w="404" h="90" z="102" display="frame" begin="0">
 <data>
-<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
+<![CDATA[<div style="width: 404px; height: 90px; box-sizing: border-box;" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'TXT_823_1', evt: oEvt });return false;"><table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
 	<tbody>
 		<tr>
 			<td style="VERTICAL-ALIGN: middle">
@@ -10996,6 +11241,16 @@
 	</tbody>
 </table></div>]]>
 </data>
+<RESPONSE name="TXT_823_1" event="ondisplay" type="link">
+<SEQ>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/r_12.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6000">
+</WAIT>
+<GOTO option="0" fs_frame="" pid="rule_158">
+</GOTO>
+</SEQ>
+</RESPONSE>
 </object>
 <object id="TXT_830" x="8" y="463" w="90" h="90" z="103" display="frame" begin="0">
 <data>
@@ -11157,17 +11412,23 @@
 <frames>
 <frame id="rule_174" dur="0" infinite="0">
 <RESPONSE name="rule_174_1" event="ondisplay" type="link">
+<SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="13" fs_cs="" cs="c" fs_ss="" ss="u">
+</SET>
 <SEQ>
 <DISPLAY pid="menu_189" display="inline" transition="0" fs_dur="" dur="1000">
 </DISPLAY>
 <METHOD pid="menu_189" method="PLAY">
 </METHOD>
-<WAIT dur="25000">
+<WAIT dur="14100">
 </WAIT>
 <SET type="score" fs_object="" objectid="" fs_property="" color_bg_switch="no" color_bg="#FFFFFF" color_border_switch="no" color_border="#000000" borderwidth_switch="no" borderwidth="0" opacity_switch="no" opacity="100" drag_switch="no" drag="no" fs_master="" master="" fs_state="" state="default" fs_objective="" pid="check2" fs_score="" oid="" additive="replace" score="13" fs_cs="" cs="c" fs_ss="" ss="u">
 </SET>
 <GOTO option="0" fs_frame="" pid="rule_126">
 </GOTO>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/end.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4000">
+</WAIT>
 </SEQ>
 </RESPONSE>
 <object id="IMG_111" x="8" y="8" w="1018" h="545" z="100" display="none" begin="0" preload="images/12_big.jpg">
@@ -11227,23 +11488,27 @@
 </object>
 <object id="menu_189" x="8" y="8" w="1018" h="545" z="106" display="frame" begin="0" type="media_003_video">
 <data>
-<![CDATA[<div class="cl-wrapper" style=""><div class="cl-container unselectable" data-player="html5"><video id="menu_189_HTML5" src="images/vid12.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
+<![CDATA[<div class="cl-wrapper" style="" ondisplay="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_189_1', evt: oEvt });return false;"><div class="cl-container unselectable" data-player="html5"><video id="menu_189_HTML5" src="images/vid12.mp4" width="1018" height="545" autobuffer="true" autoplay="true" /></div></div>]]>
 </data>
-<RESPONSE name="menu_189_1" event="onMediaEnded" type="custom">
+<RESPONSE name="menu_189_1" event="ondisplay" type="link">
 <SEQ>
-<WAIT dur="2000">
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/vi_9.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="7000">
 </WAIT>
-<DISPLAY pid="menu_189" display="none" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
-<DISPLAY pid="GROUP_33" display="inline" transition="0" fs_dur="" dur="1000">
-</DISPLAY>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/1v.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="6500">
+</WAIT>
 </SEQ>
 </RESPONSE>
 </object>
 <object id="TXT_825" x="478" y="580" w="17" h="15" z="107" display="frame" begin="0">
 <data>
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
-</p></div>]]>
+</p>
+<audio autoplay="" src="images\sing2.wav">&nbsp;
+</audio></div>]]>
 </data>
 </object>
 <object id="TXT_826" x="502" y="580" w="17" h="15" z="108" display="frame" begin="0">
@@ -11262,6 +11527,35 @@
 <![CDATA[<div style="width: 17px; height: 15px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/progress_visited.svg" />
 </p></div>]]>
 </data>
+</object>
+<object id="TXT_1392" x="956" y="561" w="56" h="56" z="111" display="none" begin="0">
+<data>
+<![CDATA[<div style="width: 56px; height: 56px; box-sizing: border-box;"><p style="text-align: center;"><img border="0" src="images/ico_next_hover.svg" />
+</p></div>]]>
+</data>
+</object>
+<object id="menu_171" x="956" y="560" w="57" h="56" z="112" display="frame" begin="0" type="101_clickarea">
+<data>
+<![CDATA[<div class="cl-wrapper" style="cursor: pointer;" onclick="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_171_1', evt: oEvt });return false;" onmouseover="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_171_2', evt: oEvt });return false;" onmouseout="try { var oEvt = e; } catch(x) { var oEvt = window.event; }; CL.Resp.Process({ respid: 'menu_171_3', evt: oEvt });return false;"><div class="style-custom" style="display: none" ><div class="rule" data-name="#menu_171 .cl-empty"><span class="rule-static">width: 57px; height: 56px;</span></div><div class="rule" data-name="#menu_171 .cl-highlight"><span class="rule-static">width: 53px; height: 52px; border-style: none; border-width: 2px; border-color: #CC6600; background-color: #FF9900; opacity: 0.4;</span></div></div><div class="cl-container unselectable" id="menu_171_CONTAINER" ><div class="cl-empty" id="menu_171_EMPTY"><svg width="57" height="56"><rect x="0" y="0" style="stroke: transparent; stroke-width: 0; fill: transparent;" width="57" height="56" /></svg></div><div class="cl-highlight" id="menu_171_HIGHLIGHT"><svg width="57" height="56"><rect x="0" y="0" style="stroke: transparent; stroke-width: 0; fill: transparent;" width="57" height="56" /></svg></div></div></div>]]>
+</data>
+<RESPONSE name="menu_171_1" event="onclick" type="link">
+<SEQ>
+<GOTO option="0" fs_frame="" pid="rule_126">
+</GOTO>
+<MEDIAPLAY play="1" fs_src_type="" src_type="file" fs_file="" src="images/end.wav" fs_object="" pid="">
+</MEDIAPLAY>
+<WAIT dur="4000">
+</WAIT>
+</SEQ>
+</RESPONSE>
+<RESPONSE name="menu_171_2" event="onmouseover" type="link">
+<DISPLAY pid="TXT_1392" display="inline" transition="0" fs_dur="" dur="1000">
+</DISPLAY>
+</RESPONSE>
+<RESPONSE name="menu_171_3" event="onmouseout" type="link">
+<DISPLAY pid="TXT_1392" display="none" transition="0" fs_dur="" dur="1000">
+</DISPLAY>
+</RESPONSE>
 </object>
 <timeline>
 </timeline>
@@ -13715,6 +14009,18 @@ window.dispatchEvent(evt);">
 <sound_over_file_custom></sound_over_file_custom>
 <hidden_noimg>Не все картинки заданы</hidden_noimg>
 </param>
+<param objectid="menu_170">
+<hidden.label.1>Дополнительные файлы</hidden.label.1>
+<hidden.label.2>(скрытый объект)</hidden.label.2>
+<files>
+<item>
+<file_uri>images/sing2.wav</file_uri>
+</item>
+<item>
+<file_uri>images/sing1.wav</file_uri>
+</item>
+</files>
+</param>
 <param objectid="oblast1">
 <hidden.label>Область нажатия</hidden.label>
 <timer>500</timer>
@@ -14196,14 +14502,13 @@ window.dispatchEvent(evt);">
 </param>
 <param objectid="menu_135">
 <text_main><![CDATA[<table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
-  <tbody>
-    <tr>
-      <td style="VERTICAL-ALIGN: middle">
-        <p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования по охране труда перед выполнением газопламенных работ  
-        </p>
-      </td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<td style="VERTICAL-ALIGN: middle">
+			<p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны труда перед выполнением газопламенных работ</p>
+			</td>
+		</tr>
+	</tbody>
 </table>]]></text_main>
 <bg_color>#1378BC</bg_color>
 <border_color>#1378BC</border_color>
@@ -14333,14 +14638,13 @@ window.dispatchEvent(evt);">
 </param>
 <param objectid="menu_139">
 <text_main><![CDATA[<table border="0" cellpadding="0" cellspacing="0" style="HEIGHT: 100%; WIDTH: 100%">
-  <tbody>
-    <tr>
-      <td style="VERTICAL-ALIGN: middle">
-        <p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны при эксплуатации баллонов со сжиженным газом
-        </p>
-      </td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<td style="VERTICAL-ALIGN: middle">
+			<p class="titul" style="TEXT-ALIGN: left; MARGIN-LEFT: 20px">Требования охраны труда при эксплуатации баллонов со сжиженным газом</p>
+			</td>
+		</tr>
+	</tbody>
 </table>]]></text_main>
 <bg_color>#1378BC</bg_color>
 <border_color>#1378BC</border_color>
@@ -16107,11 +16411,23 @@ window.dispatchEvent(evt);">
 <video_autostart>yes</video_autostart>
 <video_invisible>no</video_invisible>
 </param>
+<param objectid="menu_171">
+<hidden.label>Область нажатия</hidden.label>
+<timer>500</timer>
+<opacity>40</opacity>
+<bg_color>#FF9900</bg_color>
+<borderstyle>none</borderstyle>
+<border_color>#CC6600</border_color>
+<borderwidth>2</borderwidth>
+<preview>no</preview>
+<highlight_type>blink</highlight_type>
+<radius>0</radius>
+</param>
 </params>
 <objectives>
 <objective module="yes" id="total" name="Главная цель модуля" cs="i" ss="u" scoremax="100" scoremin="0"/>
 <objective id="check1" name="" cs="n" ss="u" scoremax="12" scoremin="0"/>
-<objective id="check2" name="" cs="n" ss="u" scoremax="13" scoremin="1"/>
+<objective id="check2" name="" cs="n" ss="u" scoremax="14" scoremin="1"/>
 </objectives>
 <rules>
 <rule objective="total" cs="c" ss="u">
