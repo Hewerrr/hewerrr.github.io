@@ -3997,7 +3997,7 @@ CLFrame.prototype.constructor = CLFrame;
 			for(var i=0; i<oThis.jxObjects.length; i++)
 			{
 				sObjectId = $(oThis.jxObjects[i]).attr("id");
-				if(CLO[sObjectId] && CLO[sObjectId].iBegin==0 && CLO[sObjectId].display!="none")
+				if(CLO[sObjectId].iBegin==0 && CLO[sObjectId].display!="none")
 				{
 					CLO[sObjectId].Show();
 				}

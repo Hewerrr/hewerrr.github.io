@@ -1,11 +1,11 @@
-var cacheName = 'videoPWA-9';
+var cacheName = 'videoPWA-11';
 
 var filesToCache = [
     './',
     './index.html',
     './scripts/app.js',
     './styles/style.css',
-    "./1/images/sc_2.jpg",
+    './1/images/sc_2.jpg',
     "./1/images/10_big.jpg",
     "./1/images/10_ogl.jpg",
     "./1/images/11_big.jpg",
@@ -61,6 +61,9 @@ var filesToCache = [
     "./1/images/ico_next_bg.svg",
     "./1/images/ico_next_hover.svg",
     "./1/images/ico_next_inactive.svg",
+    "./1/images/ico_play_bg.svg",
+    "./1/images/ico_play_hover.svg",
+    "./1/images/ico_play_inactive.svg",
     "./1/images/ico_round_electro.svg",
     "./1/images/ico_round_electro_hover.svg",
     "./1/images/ico_round_eyeglasses.svg",

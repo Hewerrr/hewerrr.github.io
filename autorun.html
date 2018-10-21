@@ -8,7 +8,8 @@
 	 </style><script language="JavaScript"> 
 	function OpenModule(sURL, nWidth, nHeight)
 	{
-		var oNewWindow = window.open(sURL, "ModuleWindow", "toolbar=no,location=no,status=no,menubar=no,resizable=no,directories=no,scrollbars=no, width="+nWidth+",height="+nHeight);
+		window.location.href = sURL;
+		//var oNewWindow = window.open(sURL, "ModuleWindow", "toolbar=no,location=no,status=no,menubar=no,resizable=no,directories=no,scrollbars=no, width="+nWidth+",height="+nHeight);
 		//oNewWindow.moveTo(0,0);
 		return false;
 	}
